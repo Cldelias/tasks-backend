@@ -1,10 +1,10 @@
 pipeline {
-	agent any
-	stages {
-		stage ('Build Backend') {
-			step {
-				sh 'mvn clean package -DskipTests=true'
-			}
-		}
-	}
+    agent any
+    stages {
+        stage ('Build Backend') {
+            steps {
+                bat 'mvn clean package -DskipTests=true'
+            }
+        }
+    }
 }
